@@ -8,8 +8,6 @@ app.js
 Code Files
 index.html
 
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +27,6 @@ Copy code
 </body>
 </html>
 style.css
-
-css
-Copy code
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -101,26 +96,22 @@ li button:hover {
     background-color: #c82333;
 }
 app.js
-
-javascript
-Copy code
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
 
-    if (taskText === '') {
+if (taskText === '') {
         alert('Please enter a task');
         return;
     }
 
-    const taskList = document.getElementById('taskList');
-    const li = document.createElement('li');
-    li.innerHTML = `
-        <span onclick="toggleTask(this)">${taskText}</span>
-        <button onclick="deleteTask(this)">Delete</button>
+const taskList = document.getElementById('taskList');
+const li = document.createElement('li');
+ li.innerHTML = `<span onclick="toggleTask(this)">${taskText}</span>
+    <button onclick="deleteTask(this)">Delete</button>
     `;
 
-    taskList.appendChild(li);
+taskList.appendChild(li);
     taskInput.value = '';
 }
 
